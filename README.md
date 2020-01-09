@@ -1,4 +1,5 @@
 # Naive-Bayes-Code
+
 library(dplyr)
 library(caret)
 library(Hmisc)
@@ -58,9 +59,6 @@ pred_test <- predict(model_train,test[,-c(18,21)])
 pred_test <- if_else(pred_test == 2,"Fraudulent","Genuine")
 pred_test <- as.factor(pred_test)
 confusionMatrix(pred_test,test$Result)
-
-
-
 
 
 # Down Sampling
